@@ -1,0 +1,688 @@
+title: 这是一个Markdown/简单HTML学习笔记
+date:  20:46:25 2023/02/26（发布于2023/11/04）
+categories:
+- Diary
+tags:
+- markdown
+- html
+---
+
+## 1.标题
+
+---
+
+创建标题使用井号（#），#号数量代表标题级别。
+
+# 这是一级标题 
+<h1>HTML HEADER1</h1>
+
+## 这是二级标题
+<h2>HTML HEADER2</h2>
+
+### 这是三级标题
+<h3>HTML HEADER3</h3>
+
+#### 这是四级标题
+<h4>HTML HEADER4</h4>
+
+一直到
+###### 六级标题
+<h6>HTML HEADER6</h6>
+
+---
+
+还可以在文本下方添加任意数量的 == 号来标识一级标题，或者 -- 号来标识二级标题。
+
+这是一级标题
+==========
+这是二级标题
+------------
+
+## 2.段落
+
+---
+
+段落使用一行或多行空白格分隔即可，如：
+
+看到了吧。
+<p>HTML paragraph1</p>
+<p>HTML paragraph2</p>
+
+## 3.换行
+
+---
+
+在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行。如：  
+这是第一行的内容  
+这是第二行的内容  
+<p>这是HTML格式下的换行展示，如：<br>这是第一行<br>这是第二行</p>  
+事实上结尾空格方式并不好用，因此推荐使用“< br >”进行换行。
+
+## 4.字体
+
+---
+
+**这个是粗体**
+<p><strong>这个也是粗体</strong></p>
+
+*这个是斜体*
+<p><em>这个也是斜体</em></p>
+
+***这个是粗体加斜体***
+<p><strong><em>这个也是粗体加斜体</em></strong></p>
+
+~这是删除线~
+
+## 5.引用
+
+---
+
+要创建块引用，请在段落前添加一个 > 符号。
+
+例如：
+>[1]鞠天应,周晓波.四川甲基卡稀有金属花岗伟晶岩矿床成因[J].四川地质学报,2016,36(01):42-46.
+
+---
+
+多个段落块引用，为段落之间的空白行添加一个 > 符号。
+
+例如：
+>[2]侯江龙. 我国两大类伟晶岩的成岩成矿特征及构造环境对比研究[D].中国地质科学院,2018.
+>
+>[3]付小方,侯立玮,王登红,袁蔺平,梁斌,郝雪峰,潘蒙.四川甘孜甲基卡锂辉石矿矿产调查评价成果[J].中国地质调查,2014,1(03):37-43.DOI:10.19388/j.zgdzdc.2014.03.006.
+
+---
+
+嵌套块引用，在要嵌套的段落前添加一个 >> 符号。
+
+例如：
+>[2]侯江龙. 我国两大类伟晶岩的成岩成矿特征及构造环境对比研究[D].中国地质科学院,2018.
+>
+>>[3]付小方,侯立玮,王登红,袁蔺平,梁斌,郝雪峰,潘蒙.四川甘孜甲基卡锂辉石矿矿产调查评价成果[J].中国地质调查,2014,1(03):37-43.DOI:10.19388/j.zgdzdc.2014.03.006.
+
+---
+
+块引用可以包含其他 Markdown 格式的元素，但并非所有元素都可以使用。
+
+例如：
+>**这个是粗体**
+>
+>*这个是斜体*
+>
+>***这个是粗体加斜体***
+>
+>~这是删除线~
+
+## 6.列表
+
+---
+
+### (1)有序列表
+要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。
+
+例如：  
+1. 列表1
+2. 列表2
+3. 列表3
+
+HTML格式为：  
+<ol>
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3</li>
+</ol>
+
+数字不按顺序的例子：  
+1. 我的前缀是1
+1. 我的前缀也是1
+1. 我的前缀还是1
+1. 我们的前缀都是1，但输出结果是1234
+
+例子二： 
+1. 我的前缀是1
+3. 我的前缀是3
+6. 我的前缀是6
+2. 我的前缀是2
+9. 我的前缀是9，虽然前缀乱七八糟，但输出还是12345
+
+列表里面嵌套列表：
+1. 列表1
+2. 列表2
+3. 列表3
+  1. 嵌套表1
+  2. 嵌套表2
+  3. 嵌套表3
+4. 列表4
+5. 列表5
+
+HTML实现：  
+<ol>
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3
+<ol>
+<li>嵌套表1</li>
+<li>嵌套表2</li>
+<li>嵌套表3</li>
+</ol></li> 
+    <li>列表4</li>
+    <li>列表5</li>
+</ol>
+
+---
+
+### (2)无序列表
+
+要创建无序列表，请在每个列表项前面添加破折号 ( - )、星号 ( * ) 或加号 ( + ) 。缩进一个或多个列表项可创建嵌套列表。
+
+例如：
+
+- 列表1
+- 列表2
+- 列表3
+
+
+* 列表1
+* 列表2
+* 列表3
+
+
++ 列表1
++ 列表2
++ 列表3
+
+HTML格式：  
+<ul>
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3</li>
+    <li>列表4</li>
+</ul>
+
+嵌套列表：  
+- 列表1
+- 列表2
+  - 嵌套表1
+  - 嵌套表2
+  - 嵌套表3
+- 列表3
+
+HTML格式：
+<ul>
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3
+<ul>
+    <li>嵌套表1</li>
+    <li>嵌套表2</li>
+</ul>
+</li>
+    <li>列表4</li>
+</ul>
+
+---
+
+### 列表中嵌套其他元素
+
+要在保留列表连续性的同时在列表中添加另一种元素，将该元素缩进**四个空格**或**一个制表符**。
+
+* 这是列表1
+* 这是列表2
+* 这是列表3
+      这是嵌套的一段话
+* 这是列表4
+
+
+* 这是列表1
+* 这是列表2
+* 这是列表3
+    >这是一个引用
+* 这是列表4
+
+---
+
+**代码块**通常采用四个空格或一个制表符缩进。当它们被放在列表中时，请将它们缩进**八个空格**或**两个制表符**。
+
+1. 下面是个python代码，用于递增子串的判断
+2. 并且运用timeit模块将运行该段代码所需的时间进行输出
+          import timeit
+          def ascll(string):
+              count = 0
+              str1 = []
+              for i in range(len(string)):
+                  Ascll_string = ord(string[i])
+                  str1.append(Ascll_string)
+              for i in range(len(string)):
+                  if str1[i] == str1[i - 1] + 1:
+                      continue
+                  else:
+                      count = count + 1
+              print(count)
+          t = timeit.timeit('ascll("1237894561abc")', 'from __main__ import ascll', number=1)
+        print("运行耗时为:{:.10f}ms".format(1000 * t))
+4. 输出结果返回递增字串的数量，以及耗时（ms）。
+
+---
+
+**图片：**
+1. 这是一个图片的演示
+2. 这个图片是文森特梵高创作的《A Path through a Ravine》
+
+    ![A%20Path%20through%20a%20Ravine.jpg](attachment:A%20Path%20through%20a%20Ravine.jpg)
+
+4. 这幅画挺不错的,不是吗。
+
+## 7.代码
+
+---
+
+要将单词或短语表示为代码，使用**反引号**（tab键上面那个）  
+这是一段python代码：`print("hello world")`
+
+HTML格式下：  
+这是一段python代码：<code>print("hello world")</code>
+
+若代码中原本就包含一个或多个反引号，则可以通过将单词或短语包裹在**双反引号**中。
+
+请看这一段：``我觉得`python`是世界上最好的语言！``
+
+---
+
+要创建**代码块**，请将代码块的每一行缩进至少**四个空格**或**一个制表符**。
+    
+    import timeit
+
+
+    def ascll(string):
+        count = 0
+        str1 = []
+        for i in range(len(string)):
+            Ascll_string = ord(string[i])
+            str1.append(Ascll_string)
+        for i in range(len(string)):
+            if str1[i] == str1[i - 1] + 1:
+                continue
+            else:
+                count = count + 1
+        print(count)
+
+
+    t = timeit.timeit('ascll("1237894561abc")', 'from __main__ import ascll', number=1)
+    print("运行耗时为:{:.10f}ms".format(1000 * t))
+
+---
+
+**语法高亮**
+
+Markdown格式下代码要高亮，用三个反引号将代码括起来，并在前面的三个反引号末尾加入语言名称。
+
+```python
+import timeit
+
+
+def ascll(string):
+    count = 0
+    str1 = []
+    for i in range(len(string)):
+        Ascll_string = ord(string[i])
+        str1.append(Ascll_string)
+    for i in range(len(string)):
+        if str1[i] == str1[i - 1] + 1:
+            continue
+        else:
+            count = count + 1
+    print(count)
+
+
+t = timeit.timeit('ascll("1237894561abc")', 'from __main__ import ascll', number=1)
+print("运行耗时为:{:.10f}ms".format(1000 * t))
+```
+
+## 8.分割线
+
+---
+
+要创建分隔线，请在单独一行上使用三个或多个星号 ( *** )、破折号 ( --- ) 或下划线 ( ___ ) ，并且不能包含其他内容。
+
+这是分割线前面的
+
+---
+
+这是分割线后面的（看到这里，请把前面的小节加上分割线）
+
+## 9.链接
+
+---
+
+**注意：**  
+***不同的 Markdown 应用程序处理URL中间的空格方式不一样。为了兼容性，请尽量使用%20代替空格。***
+
+---
+
+链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。
+
+链接title是当鼠标悬停在链接上时会出现的文字，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。
+
+超链接Markdown语法代码：[超链接显示名](超链接地址 "超链接title")
+
+对应的HTML代码：<a href="超链接地址" title="超链接title">超链接显示名</a>
+
+例如：  
+这是中国矿业大学官网的链接：[中国矿业大学](https://www.cumt.edu.cn/ "CUMT官网")
+
+HTML示例：  
+这是哔哩哔哩官网链接：<a href="https://www.bilibili.com/" title="最好的学习网站">b站</a>
+
+---
+
+使用**尖括号**可以很方便地把URL或者email地址变成可点击的链接。
+
+<https://www.bilibili.com/>  
+<05191618@cumt.edu.cn>
+
+---
+
+#### 带格式化的链接
+
+强调链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。
+
+例如：  
+这是中国矿业大学的官网：**[中国矿业大学](https://www.cumt.edu.cn/ "CUMT官网")**  
+这是中国矿业大学的官网：*[中国矿业大学](https://www.cumt.edu.cn/ "CUMT官网")*   
+这是一个代码链接：[`python`](http://localhost:8888/notebooks/markdown%E5%AD%A6%E4%B9%A0.ipynb#3.%E6%8D%A2%E8%A1%8C)
+
+## 10.图片
+
+---
+
+要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。
+
+插入图片Markdown语法代码： `![图片alt](图片链接 "图片title")。`
+
+对应的HTML代码：`<img src="图片链接" alt="图片alt" title="图片title">`
+
+例如：
+
+![梵高的画](attachment:Flower%20Beds%20in%20Holland.jpg "Flower Beds in Holland")
+
+HTML格式（个人推荐）：
+
+<img src="./First Steps (after Millet).jpg" title="First Steps (after Millet)" >
+
+---
+
+**链接图片**  
+给图片增加链接，请将图像的**Markdown**括在**方括号**中，然后将**链接**添加在**圆括号**中。
+
+[![梵高的画](./First%20Steps%20(after%20Millet).jpg "First Steps (after Millet)")](https://www.metmuseum.org/art/collection/search/436526)  
+
+
+## 11.转义字符
+
+---
+
+要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加**反斜杠字符 \**。
+
+例如：
+
+\* Without the backslash, this would be a bullet in an unordered list.
+
+---
+
+#### 可做转义的字符
+以下列出的字符都可以通过使用反斜杠字符从而达到转义目的。
+
+\`（反引号），*（星号），_（下划线），{ }\[ ]( )（大、中、小括号），#（井号），+ -（加减号），.（点），！（感叹号），|（分隔符）
+
+| 符号 | 名称   |
+|------|--------|
+| `    | 反引号 |
+| *    | 星号   |
+| _    | 下划线 |
+| { }  | 大括号 |
+| [ ]  | 中括号 |
+| ( )  | 小括号 |
+| #    | 井号   |
+| +    | 加号   |
+| -    | 减号   |
+| .    | 点     |
+| ！   | 感叹号 |
+| \|   | 分隔符 |
+
+---
+
+#### 特殊字符自动转义
+
+在 HTML 文件中，有两个字符需要特殊处理： `<` 和 `&` 。 `<` 符号用于起始标签，`&` 符号则用于标记 HTML 实体，如果你只是想要使用这些符号，你必须要使用实体的形式，像是 `&lt;` 和 `&amp;`。
+
+`&` 符号其实很容易让写作网页文件的人感到困扰，如果你要打「AT&T」 ，你必须要写成「`AT&amp;T`」 ，还得转换网址内的 `&` 符号，如果你要链接到：
+
+>`http://images.google.com/images?num=30&q=larry+bird`
+
+你必须要把网址转成：
+
+>`http://images.google.com/images?num=30&amp;q=larry+bird`
+
+才能放到链接标签的 `href` 属性里。不用说也知道这很容易忘记，这也可能是 HTML 标准检查所检查到的错误中，数量最多的。
+
+Markdown 允许你直接使用这些符号，它帮你自动转义字符。如果你使用 `&` 符号的作为 HTML 实体的一部分，那么它不会被转换，而在其它情况下，它则会被转换成 `&amp;`。所以你如果要在文件中插入一个著作权的符号，你可以这样写：
+
+`&copy;`
+
+Markdown 将不会对这段文字做修改，但是如果你这样写：
+
+`AT&T`
+
+Markdown 就会将它转为：
+
+`AT&amp;T`
+
+类似的状况也会发生在 `<` 符号上，因为 Markdown 支持 行内 HTML ，如果你使用 `<` 符号作为 HTML 标签的分隔符，那 Markdown 也不会对它做任何转换，但是如果你是写：
+
+`4 < 5`
+
+Markdown 将会把它转换为：
+
+`4 &lt; 5`
+
+需要特别注意的是，在 Markdown 的块级元素和内联元素中， `<` 和 `&` 两个符号都会被自动转换成 HTML 实体，这项特性让你可以很容易地用 Markdown 写 HTML。（**在 HTML 语法中，你要手动把所有的 `<` 和 `&` 都转换为 HTML 实体。**）
+
+## 12.Markdown 内嵌 HTML 标签
+
+对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。
+
+---
+
+#### 行级內联标签
+
+HTML 的行级內联标签如 `<span>`、`<cite>`、`<del>` 不受限制，可以在 Markdown 的段落、列表或是标题里任意使用。
+
+例如：
+
+This **word** is bold. This <em>word</em> is italic.
+
+---
+
+#### 区块标签
+
+区块元素──比如 `<div>`、`<table>`、`<pre>`、`<p>` 等标签，必须**在前后加上空行**，以便于内容区分。而且这些元素的开始与结尾标签，不可以用 `tab` 或是空白来缩进。Markdown 会自动识别这区块元素，避免在区块标签前后加上没有必要的 `<p>` 标签。
+
+---
+
+在 HTML 块级标签内不能使用 Markdown 语法。例如 `<p>italic and **bold**</p>` 将不起作用。
+
+# Markdown 扩展语法
+---
+
+## 13.Markdown 表格
+---
+要添加表，请使用三个或多个连字符（`---`）创建每列的标题，并使用管道（`|`）分隔每列。您可以选择在表的任一端添加管道。
+
+例如：
+
+| 姓名   | 成绩   |
+|---------|---------|
+| 张三   |    60  |
+| 李四   |    70  |
+| 王五   |    80  |
+| 程艾影  |    90  |
+| 伍岚正  |    100 |
+
+单元格宽度可以变化，如下所示。呈现的输出将看起来相同。
+
+| 姓名   | 成绩   |
+|-------|------|
+| 张三     |    60  |
+| 李四  |    70  |
+| 王五    |    80  |
+| 程艾影  |      90  |
+| 伍岚正  |  100 |
+
+---
+
+**Tip:** 使用连字符和管道创建表可能很麻烦。为了加快该过程，请尝试使用<a href="https://www.tablesgenerator.com/markdown_tables" title="快速构建Markdown表格">Markdown Tables Generator</a>。使用图形界面构建表，然后将生成的Markdown格式的文本复制到文件中。
+
+（看到这，返回去，把转义字符列个表格）
+
+---
+### 对齐
+
+通过在标题行中的**连字符**的**左侧**，**右侧**或**两侧**添加冒号（`:`），将列中的文本对齐到**左侧**，**右侧**或**中心**。
+
+可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（\`）中的单词或短语，而不是代码块）和强调。
+
+**不能**添加标题，块引用，列表，水平规则，图像或HTML标签。
+
+可以使用表格的HTML字符代码（`&#124;`）在表中显示竖线（`|`）字符。
+
+| **左对齐**      | **居中对齐**  | **右对齐**    |
+| :---          |  :----:      |    ---:     |
+| *听我说*        | *谢谢*      |   *你*      |
+| ***因为有你***   | ***温暖了***  | ***四季*** &#124;  |
+
+## 14.Markdown脚注
+---
+
+脚注使您可以添加注释和参考，而不会使文档正文混乱。当您创建脚注时，带有脚注的上标数字会出现在您添加脚注参考的位置。读者可以单击链接以跳至页面底部的脚注内容。
+
+要创建脚注参考，请在方括号（`[^1]`）内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符。标识符仅将脚注参考与脚注本身相关联-在输出中，脚注按顺序编号。
+
+在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（`[^1]: My footnote.`）。您不必在文档末尾添加脚注。您可以将它们放在除列表，块引号和表之类的其他元素之外的任何位置。
+
+
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
+
+## 15.Markdown 标题编号
+---
+
+许多Markdown处理器支持标题的自定义ID - 一些Markdown处理器会自动添加它们。添加自定义ID允许您直接链接到标题并使用CSS对其进行修改。要添加自定义标题ID，请在与标题相同的行上用大括号括起该自定义ID。
+
+```markdown
+### My Great Heading {#custom-id}
+```
+HTML看起来像这样：
+```html
+<h3 id="custom-id">My Great Heading</h3>
+```
+---
+
+### 链接到标题ID (#headid)
+
+通过创建带有数字符号（`#`）和自定义标题ID的\[标准链接]((/basic-syntax/links.html)，可以链接到文件中具有自定义ID的标题。
+
+|Markdown|HTML|预览效果|
+|:---:|:---:|:---:|
+|[Heading IDs](https://markdown.com.cn/extended-syntax/heading-ids.html)|<a href="http://localhost:8888/notebooks/Markdown%E5%AD%A6%E4%B9%A0.ipynb#heading-ids">Heading IDs</a>|前两个就是预览效果|
+
+其他网站可以通过将自定义标题ID添加到网页的完整URL（例如`[Heading IDs](https://markdown.com.cn/extended-syntax/heading-ids.html#headid)`）来链接到标题。
+
+## 16.Markdown 定义列表
+---
+
+一些Markdown处理器允许您创建术语及其对应定义的*定义列表*。要创建定义列表，请**在第一行上键入术语。在下一行，键入一个冒号，后跟一个空格和定义**。
+
+例如： 
+```markdown
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+```
+HTML看起来像这样：
+```html
+<dl>
+  <dt>First Term</dt>
+  <dd>This is the definition of the first term.</dd>
+  <dt>Second Term</dt>
+  <dd>This is one definition of the second term. </dd>
+  <dd>This is another definition of the second term.</dd>
+</dl>
+```
+
+## 17.Markdown删除线
+---
+在单词前后使用两个波浪号`~~`。
+
+例如：
+
+```markdown
+~~世界是平坦的。~~ 我们现在知道世界是圆的。
+```
+输出结果：
+
+~~世界是平坦的。~~ 我们现在知道世界是圆的。
+
+## 18.Markdown 任务列表语法
+---
+任务列表使您可以创建带有复选框的项目列表。在支持任务列表的Markdown应用程序中，复选框将显示在内容旁边。
+
+要创建任务列表，请在任务列表项之前添加**破折号**`-`和**方括号**`[ ]`，并在`[ ]`前面加上**空格**。
+
+要选择一个复选框，请在方括号`[x]`之间添加 `x `。
+
+- [x] 学习Markdown
+- [ ] 复习python
+- [ ] 学习HTML,CSS,Javascript
+
+## 19.Markdown 使用 Emoji 表情
+---
+有两种方法可以将表情符号添加到Markdown文件中：将表情符号复制并粘贴到Markdown格式的文本中，或者键入*emoji shortcodes*。
+
+### 复制和粘贴表情符号
+
+在大多数情况下，您可以简单地从<a href="https://emojipedia.org/">Emojipedia</a> 等来源复制表情符号并将其粘贴到文档中。许多Markdown应用程序会自动以Markdown格式的文本显示表情符号。从Markdown应用程序导出的HTML和PDF文件应显示表情符号。
+
+😊❤️✨🔥
+
+**Tip:** 如果您使用的是静态网站生成器，请确保将HTML页面编码为UTF-8。
+
+### 使用表情符号简码
+
+一些Markdown应用程序允许您通过键入表情符号短代码来插入表情符号。这些以冒号开头和结尾，并包含表情符号的名称。
+```markdown
+去露营了！ :tent: 很快回来。
+
+真好笑！ :joy:
+```
+（这一种似乎没有办法在Jupyter中使用）
+
+# 本文到此完结，文章参考<a href="https://markdown.com.cn/intro.html">Markdown官方文档</a> &copy;
+
+                                                                        
+                                                                  程乾军
+                                                                  2023年2月26日
+                                                                  癸卯年二月初七
+                                                                  中国矿业大学南湖校区杏苑二号楼B5182
+
